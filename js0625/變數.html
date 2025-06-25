@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你好</title>
+</head>
+<body>
+    <script>
+        //變數宣告
+        var a;
+        console.log(a);
+        console.log(typeof a);
+        //變數給值
+        a="字串";
+        console.log(a);
+        console.log(typeof a);
+        document.write(a);
+        document.write("<br>");
+        //改變型別為整數數值(不含小數)
+        a=123;
+        console.log(a);
+        console.log(typeof a);
+        document.write(a);
+        document.write("<br>");
+        //改變型別為浮點數數值(含小數)
+        a=12.3;
+        console.log(a);
+        console.log(typeof a);
+        document.write(a);
+        document.write("<br>");
+        document.write(typeof a);
+        //改變型別為布林值
+        a=true;
+        console.log(a);
+        console.log(typeof a);
+        document.write("<br>");
+        document.write( a);
+
+        //宣告兩個變數存放資料
+        var a=5;
+        var b=8;
+        //並加總結果給另一個變數
+        var c=a+b;
+        // 查看結果
+        document.write("<br>");
+        console.log(a + "+" + b + "=" + c);
+        document.write(a + "+" + b + "=" + c);
+        document.write("<br>");
+        // 改用樣板字串template string
+        // 使用反引號(``)，變數部分${變數名稱}
+        console.log(`${a}+${b}=${c}`);
+        console.log(`${a}+${b}=${a+b}`);
+    </script>
+</body>
+</html>

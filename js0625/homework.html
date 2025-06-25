@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 寫法一 巢狀運算值
+        // var a = "admin";
+        // var b = "1234";
+        // if (a == "admin") {
+        //     if (b == "1234") {
+        //         // 帳密正確
+        //         document.write("帳密正確");
+        //     } else {
+        //         // 密碼錯誤
+        //         document.write("密碼錯誤");
+        //     }
+        // } else {
+        //     if (b == "1234") {
+        //         // 帳號錯誤
+        //         document.write("帳號錯誤");
+        //     } else {
+        //         document.write("帳密都錯");
+        //     }
+        // }
+        // 寫法二 巢狀運算值
+        var a = "admin";
+        var b = "1234";
+            if ((a == "admin")&&(b == "1234")) {
+                document.write("帳密正確");
+            }else if((a == "admin")&&(b != "1234")){
+                    document.write("密碼錯誤");  
+               }else if ((a != "admin")&&(b == "1234")) {
+                document.write("帳號錯誤");
+                }else if ((a != "admin")&&(b != "1234")) {
+                    document.write("帳密都錯");
+                }
+
+                
+
+    </script>
+</body>
+
+</html>

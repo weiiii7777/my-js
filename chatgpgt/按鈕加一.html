@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>數字加一</title>
+</head>
+<body>
+
+  <p id="counter">0</p>
+  <button onclick="increase()">加一</button>
+   <button onclick="reduce()">減一</button>
+
+  <script>
+    let count = 0;
+    function increase() {
+      count++;
+      document.getElementById("counter").textContent = count;
+    }
+    function reduce() {
+      count--;
+      document.getElementById("counter").textContent = count;
+    }
+  </script>
+
+</body>
+</html>

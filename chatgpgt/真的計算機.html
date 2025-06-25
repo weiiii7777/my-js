@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>計算機</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .calculator {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .display {
+      background-color: #000;
+      color: #0f0;
+      font-size: 2em;
+      padding: 10px;
+      text-align: right;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      min-width: 240px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+    }
+
+    button.operator {
+      background-color: orange;
+    }
+
+    button.equal {
+      background-color: green;
+    }
+
+    button.clear {
+      background-color: red;
+    }
+
+    button:hover {
+      filter: brightness(1.2);
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <div id="display" class="display">0</div>
+  <div class="buttons">
+    <button onclick="press('7')">7</button>
+    <button onclick="press('8')">8</button>
+    <button onclick="press('9')">9</button>
+    <button class="operator" onclick="press('/')">÷</button>
+
+    <button onclick="press('4')">4</button>
+    <button onclick="press('5')">5</button>
+    <button onclick="press('6')">6</button>
+    <button class="operator" onclick="press('*')">×</button>
+
+    <button onclick="press('1')">1</button>
+    <button onclick="press('2')">2</button>
+    <button onclick="press('3')">3</button>
+    <button class="operator" onclick="press('-')">−</button>
+
+    <button onclick="press('0')">0</button>
+    <button onclick="press('.')">.</button>
+    <button class="equal" onclick="calculate()">＝</button>
+    <button class="operator" onclick="press('+')">＋</button>
+
+    <button class="clear" style="grid-column: span 4;" onclick="clearDisplay()">清除</button>
+  </div>
+</div>
+
+<script>
+  let currentInput = "";
+
+  function press(value) {
+    currentInput += value;
+    document.getElementById("display").textContent = currentInput;
+  }
+
+  function calculate() {
+    try {
+      let result = eval(currentInput);
+      document.getElementById("display").textContent = result;
+      currentInput = result.toString();
+    } catch {
+      document.getElementById("display").textContent = "錯誤";
+      currentInput = "";
+    }
+  }
+
+  function clearDisplay() {
+    currentInput = "";
+    document.getElementById("display").textContent = "0";
+  }
+</script>
+
+</body>
+</html>

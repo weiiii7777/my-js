@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 血型判斷
+        // A,B,O,AB
+
+        // 建立一個血型變數存放使用者的血型
+        var blood = "";
+        // 變數=輸入視窗
+        blood = prompt("你的血型是什麼?").toUpperCase();
+
+        switch (blood) {
+            case "A":
+                document.write("A型");
+                break;
+            case "B":
+                document.write("B型");
+                break;
+            case "O":
+                document.write("O型");
+                break;
+            case "AB":
+                document.write("AB型");
+                break;
+            default:
+                document.write("沒有"+blood+"這個血型");
+                break;
+        }
+
+        // if (blood == "A"){
+        //     document.write("A型");
+        // }else if (blood == "B"){
+        //     document.write("B型");
+        // }else if (blood == "O"){
+        //     document.write("O型");
+        // }else if (blood == "AB"){
+        //     document.write("AB型");
+        // }else {
+        //     document.write("沒有"+blood+"這個血型");
+        // }
+
+
+    </script>
+</body>
+</html>

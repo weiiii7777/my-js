@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>簡單計算機</title>
+</head>
+<body>
+
+  <h2>簡單計算機</h2>
+
+  <input type="number" id="num1" placeholder="輸入第一個數字">
+  <input type="number" id="num2" placeholder="輸入第二個數字">
+
+  <br><br>
+
+  <button onclick="calculate('+')">加</button>
+  <button onclick="calculate('-')">減</button>
+  <button onclick="calculate('*')">乘</button>
+  <button onclick="calculate('/')">除</button>
+
+  <p id="result">結果：--</p>
+
+  <script>
+    function calculate(operator) {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      let result;
+
+      if (isNaN(n1) || isNaN(n2)) {
+        result = "請輸入兩個數字";
+      } else {
+        switch(operator) {
+          case '+':
+            result = n1 + n2;
+            break;
+          case '-':
+            result = n1 - n2;
+            break;
+          case '*':
+            result = n1 * n2;
+            break;
+          case '/':
+            result = n2 === 0 ? "除以 0 沒有意義！" : (n1 / n2);
+            break;
+        }
+      }
+
+      document.getElementById("result").textContent = "結果：" + result;
+    }
+  </script>
+
+</body>
+</html>
