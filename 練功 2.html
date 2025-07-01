@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var water = "";
+
+        water = prompt("你用幾度電").toUpperCase();
+        switch (water) {
+            case water>=1 && 10>=water:
+                document.write(water*7.35);
+                break;
+            case "B":
+                document.write("B型");
+                break;
+            case "O":
+                document.write("O型");
+                break;
+            case "AB":
+                document.write("AB型");
+                break;
+            default:
+                document.write("沒有"+blood+"這個血型");
+                break;
+        }
+
+    </script>
+</body>
+</html>
