@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請統計出1-100的基數和
+        var m = 0;
+        for (var i = 1; i <= 100; i = i + 2) {
+            m = m + i;
+        }
+        document.write(m + "<hr>");
+
+        //請統計出100-1的偶數和
+        var m = 0;
+        for (var i = 100; i >= 1; i = i - 2) {
+            m = m + i;
+        }
+        document.write(m + "<hr>");
+
+        // 請統計出1-100之間同時是3和5的倍數和，並列出數字
+
+        // 寫法一：巢狀檢查
+        var endValue = 0;
+        for (var i = 100; i >= 1; i--) {
+            if (i % 3 == 0) {
+                if (i % 5 == 0) {
+                    endValue = i;
+                    break;//結束迴圈
+                }
+            }
+        }
+
+        var m = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                if (i % 5 == 0) {
+                    m = m + i;
+                    document.write(i);
+                    if (i == endValue) {
+                        document.write("=");
+                    } else {
+                        document.write("+");
+                    }
+                }
+            }
+        }
+
+
+
+        document.write(m + "<hr>");
+        var n = "";
+        var m = 0;
+        for (var i = 1; i <= 100; i++) {
+            if ((i % 5 == 0) && (i % 3 == 0)) {
+                n = n + i;
+                n = n + " ";
+                m = m + i;
+            }
+        }
+        document.write(n + "總合為" + m + "<hr>");
+
+    </script>
+
+</body>
+
+</html>

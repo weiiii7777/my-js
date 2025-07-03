@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        document.write("*<br>");
+        document.write("**<br>");
+        document.write("***<br>");
+        document.write("****<br>");
+        document.write("*****<br>");
+        */
+        // 外層控制列數
+        for (i = 1; i <= 5; i++) {
+            // 內層控制星星個數
+            // 因為星星個數等於外層列數
+            // 星星的執行次數會跟目前列數一樣
+            for (j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+
+        }
+
+        // 99乘法表
+        for (n = 1; n <= 9; n++) {
+            for (j = 1; j <= 9; j++) {
+                document.write(n + "*" + j + "=" + n * j + " ");
+            }
+            document.write("<br>")
+        }
+        document.write("<hr>")
+
+        // 一位數有0
+        for (n = 1; n <= 9; n++) {
+            for (j = 1; j <= 9; j++) {
+                document.write(n + "*" + j + "=");
+                if (n * j < 10) {
+                    document.write("0");
+                }
+                // 因為網頁不允許連續多個半形空白（會視為一個）
+                // 若要多個空白
+                // １.可使用全形空白
+                // ２.可使用html空白符號 &nbsp;
+                document.write(n * j + "&nbsp;");
+            }
+            document.write("<br>")
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
