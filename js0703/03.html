@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 標籤 -->
     <label for="">數值1</label>
+    <!-- 文字方塊 -->
     <input type="number" id="n1">
     <br>
     <label for="">數值2</label>
-    <input type="number">
+    <input type="number" id="n2">
     <br>
     <button onclick="tot()">加總</button>
     <br>
@@ -23,8 +25,16 @@
             var n1=document.getElementById("n1");
             // 取得數值1的位置
             var n2=document.getElementById("n2");
+            
+            // console.log("轉換前" +typeof n1.value)
+            // console.log("字串轉數值" + typeof parseInt(n1.value))
+            // // 數值轉字串 數值資料.toString()
+            // // var strNum = 123;
+            // console.log("數值轉字串" + typeof strNum.toString())
+            // 查看型別 typeof
+
             // 取得數值1的內容，並顯示在指定位置
-            document.write("result").textContent = n1.value+n2.value
+            document.getElementById("result").textContent = parseInt(n1.value) + parseInt(n2.value);
         }
     </script>
 </body>

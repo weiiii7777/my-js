@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 標籤 -->
+    <label for="">數值1</label>
+    <!-- 文字方塊 -->
+    <input type="number" id="n1">
+    <br><br>
+    <button onclick="a()">+</button>
+    <button onclick="b()">-</button>
+    <button onclick="c()">*</button>
+    <button onclick="d()">/</button>
+    <br><br>
+    <label for="">數值2</label>
+    <input type="number" id="n2">
+    <br>
+    <p id="result">合計結果</p>
+
+    <script>
+        var n1 = document.getElementById("n1");
+        var n2 = document.getElementById("n2");
+        var result = document.getElementById("result");
+        function a() {
+            result.textContent = parseInt(n1.value) + parseInt(n2.value);
+        }
+        function b() {
+            result.textContent = parseInt(n1.value) - parseInt(n2.value);
+        }
+        function c() {
+            result.textContent = parseInt(n1.value) * parseInt(n2.value);
+        }
+        function d() {
+            // 取小數位.toFixed(小數位數)
+            result.textContent = (parseInt(n1.value) / parseInt(n2.value).toFixed(2));
+        }
+
+    </script>
+</body>
+
+</html>
