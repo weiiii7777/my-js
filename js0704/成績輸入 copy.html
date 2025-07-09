@@ -8,15 +8,24 @@
 </head>
 
 <body>
-    <p id="result">結果</p>
-
+    <!-- 標籤 -->
+    <label for="">請輸入成績</label>
+    <!-- 文字方塊 -->
+    <input type="number" id="n1">
     <script>
-        var a = 0;//及格
-        var b = 0;//不及格
-        var c = 0;//全班分數相加
-        var d = 0;//全班平均
-
-        // 如果有break可以不用接else if直接放一個新的if
+        // 請輸入成績N次, 直到輸入-1時結束
+        // 並統計出如下
+        // 及格人數
+        // 及格人數
+        // 全班總分
+        // 全班平均
+        var a = 0//及格
+        var b = 0//不及格
+        var c = 0//全班分數相加
+        var d = 0//全班平均
+        var e = 0//加總次數
+        var grade = document.getElementById("n1");
+        
         do {
             var grade = prompt("請輸入成績，輸入-1時結束");
 
@@ -65,10 +74,12 @@
             c += grade;
         } while (1);//or(1)=(true);(0)=(false)
 
-
-
         if ((a + b) > 0) {
             d = c / (a + b);
+        }
+        
+        if(c % (a + b) != 0 ){
+            d = d.toFixed(1)
         }
 
         // 顯示結果
@@ -77,7 +88,7 @@
             及格人數有: ${a}<br>
             不及格人數有:${b}<br>
             全班總分:${c}<br>
-            全班平均:${d.toFixed(2)}分
+            全班平均:${d}分
             `;
     </script>
 </body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 取亂數(0-1)之間 Math.random()
+        // Math.random()*n 回傳0,1,2....,n-1 
+        var rd = Math.random() * 100;
+
+        // 去除亂數的小數(無條件捨去)
+        // console.log(Math.floor(rd))
+
+        // 去除亂數的小數後+1(避免結果得到0)
+        rd = Math.floor(rd) + 1
+        rd = Number(rd);
+        min = 1
+        max = 100
+        while (1) {
+            var num = prompt("猜數字");
+            num = Number(num);
+            if (num = rd) {
+                alert("恭喜你答對了，就是" + num)
+                break;
+            } else if (num > rd) {
+                max = num
+                alert("太大了(提示：" + min + "-" + max + ")")
+            } else if (num < rd) {
+                min = num
+                alert("太小了(提示：" + min + "-" + max + ")")
+            }
+        }
+    </script>
+</body>
+
+</html>
