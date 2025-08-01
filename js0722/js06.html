@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sayHi = () => {
+            return 'Hi, ';
+        }
+
+
+        // 函式中呼叫另一個函式
+        // 寫法1
+        let welcome = (name) => {
+            console.log(sayHi() + name);
+        }
+        welcome("javaScript");
+
+
+        // 寫法2
+        let welcome2 = (funName, name) => {
+            console.log(funName() + name);
+        }
+        welcome2(sayHi, "javaScript2");
+
+        // 寫法3 callback
+        let welcome3 = ( name) => {
+            console.log(funName() + name);
+        }
+        welcome3(sayHi, "javaScript2");
+    </script>
+</body>
+
+</html>

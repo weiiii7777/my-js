@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立物件
+        let user = {
+            name: '毛毛',
+            age: 2.5,
+
+
+            // 方法成員
+            showMag: function () {
+                // 方法1
+                console.log("Hi, 我是" + user.name + "！");
+                // 方法2
+                console.log("Hi, 我是" + this.name + "！");
+            }
+        }
+        // 取得物件屬性=>物件名稱.屬性名稱()
+        // 使用成員運算子(.)
+        console.log("使用者姓名:" + user.name);
+        console.log("使用者年齡:" + user.age + "歲");
+
+        // 取得物件屬性=>物件名稱.屬性名稱()
+        // 物件名稱["屬性名稱"]
+        console.log("使用者姓名:" + user["name"]);
+        console.log("使用者年齡:" + user["age"] + "歲");
+
+        // 物件取件方法=>物件名稱.方法名稱()
+        user.showMag();
+    </script>
+</body>
+
+</html>

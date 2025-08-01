@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 普通函式 兩數相加
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+        console.log(add(5, 3));
+
+        // 匿名函式 function後沒有名稱 被提到前面
+        let add2 = function (n1, n2) {
+            return n1 + n2;
+        }
+        console.log(add2(10, 8));
+
+        // 傳送半徑，算圓面積
+        let getArea = function (r) {
+            // 建立一個常數的值(執行中的值不能變更，一旦變更就會出錯)
+            const pi = 3.14;
+            return r * r * pi;
+        }
+        // console.log(getArea(10));
+
+        // 箭頭函式(arrow function)
+        let getArea2 = (r2) => {
+            const pi = 3.14;
+            return pi * r2 * r2;
+        }
+        console.log(getArea2(10));
+    </script>
+</body>
+
+</html>

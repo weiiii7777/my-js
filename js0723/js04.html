@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 物件樣板：適用於多個物件表示相似的東西時可用
+        // 樣板名稱通常以「大寫」字母開頭
+        // 建立一個名稱為User函式做為物件的樣板，
+        // 內有name,age,height,weight二個屬性，showBMI()方法
+        function User(myName, myAge, myH, myW) {
+            this.name = myName;
+            this.age = myAge;
+            this.height = myH / 100;
+            this.weight = myW;
+
+
+            this.showBMI = function () {
+                let bmi = this.weight / Math.pow(this.height, 2);
+                bmi = bmi.toFixed(2);
+                // console.log(bmi);
+                return bmi;
+            }
+        }
+        // 使用物件樣板，必須用new關鍵字
+        let user1 = new User('小叮噹', 20, 157, 50);
+        console.log(user1);
+        console.log(user1.showBMI());
+        let user2 = new User('小丸子', 18, 130, 45);
+        console.log(user2);
+        console.log(user2.showBMI());
+    </script>
+</body>
+
+</html>
